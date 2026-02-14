@@ -35,7 +35,6 @@
 
 package io.github.msobkow.v3_1.cfsec.cfsecramtest.spring;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
@@ -57,6 +56,8 @@ public class CFSecRamTestStartupListener {
         System.err.println("CFSecRamTest StartupListener tests beginning...");
 
 		ICFSecSchema.getBackingCFSec().wireTableTableInstances();
+
+		ICFSecSchema.getBackingCFSec().bootstrapSchema();
 
         System.err.println("Executing testCFSec.performTests()");
         try {
