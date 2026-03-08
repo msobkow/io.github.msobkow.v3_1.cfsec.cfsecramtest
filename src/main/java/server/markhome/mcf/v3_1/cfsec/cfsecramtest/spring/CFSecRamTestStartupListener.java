@@ -2,7 +2,7 @@
 // Description: Spring StartupListener for the RamTest program
 
 /*
- *	io.github.msobkow.CFSec
+ *	server.markhome.mcf.CFSec
  *
  *	Copyright (c) 2016-2026 Mark Stephen Sobkow
  *	
@@ -33,17 +33,17 @@
  *	
  */
 
-package io.github.msobkow.v3_1.cfsec.cfsecramtest.spring;
+package server.markhome.mcf.v3_1.cfsec.cfsecramtest.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
-import io.github.msobkow.v3_1.cflib.*;
-import io.github.msobkow.v3_1.cflib.dbutil.*;
-import io.github.msobkow.v3_1.cfsec.cfsec.*;
-import io.github.msobkow.v3_1.cfsec.cfsec.buff.*;
-import io.github.msobkow.v3_1.cfsec.cfsecram.*;
+import server.markhome.mcf.v3_1.cflib.*;
+import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsec.*;
+import server.markhome.mcf.v3_1.cfsec.cfsec.buff.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecram.*;
 
 @Component
 public class CFSecRamTestStartupListener {

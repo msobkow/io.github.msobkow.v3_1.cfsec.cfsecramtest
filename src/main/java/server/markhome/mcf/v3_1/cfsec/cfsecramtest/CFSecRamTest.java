@@ -2,7 +2,7 @@
 // Description: Java 25 Main for testing the CFSec schema instance creation
 
 /*
- *	io.github.msobkow.CFSec
+ *	server.markhome.mcf.CFSec
  *
  *	Copyright (c) 2016-2026 Mark Stephen Sobkow
  *	
@@ -33,7 +33,7 @@
  *	
  */
 
-package io.github.msobkow.v3_1.cfsec.cfsecramtest;
+package server.markhome.mcf.v3_1.cfsec.cfsecramtest;
 
 import java.lang.reflect.*;
 import java.io.File;
@@ -56,17 +56,17 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
-import io.github.msobkow.v3_1.cflib.*;
-import io.github.msobkow.v3_1.cflib.inz.Inz;
-import io.github.msobkow.v3_1.cflib.inz.InzPathEntry;
-import io.github.msobkow.v3_1.cflib.dbutil.*;
-import io.github.msobkow.v3_1.cfsec.cfsec.*;
-import io.github.msobkow.v3_1.cfsec.cfsec.buff.*;
-import io.github.msobkow.v3_1.cfsec.cfsecram.*;
+import server.markhome.mcf.v3_1.cflib.*;
+import server.markhome.mcf.v3_1.cflib.inz.Inz;
+import server.markhome.mcf.v3_1.cflib.inz.InzPathEntry;
+import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsec.*;
+import server.markhome.mcf.v3_1.cfsec.cfsec.buff.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecram.*;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-    "io.github.msobkow.v3_1.cfsec.cfsecramtest.spring"   // if you have service beans here
+    "server.markhome.mcf.v3_1.cfsec.cfsecramtest.spring"   // if you have service beans here
 })
 @EnableAutoConfiguration(exclude = {
 })
@@ -188,7 +188,7 @@ public class CFSecRamTest
     }
 
     public static void main(String[] args) {
-        Inz.addPathEntry(new InzPathEntry("/opt/mcf/v3_1/java" + "/io.github.msobkow.v3_1.cfsec.cfsecramtest/src/main/resources/" + "/io.github.msobkow.v3_1.cfsec.cfsecramtest".replace(".","/") + "/langs"));
+        Inz.addPathEntry(new InzPathEntry("/opt/mcf/v3_1/java" + "/server.markhome.mcf.v3_1.cfsec.cfsecramtest/src/main/resources/" + "/server.markhome.mcf.v3_1.cfsec.cfsecramtest".replace(".","/") + "/langs"));
 
         // This weird looking cadence ensures that all the sub-property lists are prepared before getMergedProperties() is invoked, ensuring that any errors and exceptions along the way are thrown first and in predictable order
         Properties mergedProperties = getApplicationProperties();
